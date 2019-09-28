@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bigstarter Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+  #img1
+{
+  background-repeat: no-repeat;
+  width:100%;
+  display:block;
+  height:auto;
+  position: relative;
+} 
+.pabout
+{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+  font-size: 45px;
+  
+}
+.pabout1
+{
+  text-align: center;
+  color: gray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: lighter;
+
+  line-height: 1.5;
+}
+.tech1
+{
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 5%;
+}
+.tech2p
+{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+}
+
+#end
+{
+  margin-bottom: 1%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: gray;
+  text-align: center;
+ 
+}
+#imgchange
+{
+  max-width: 60%;
+ margin: 7% 20%; 
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 8%;
+  right:15%;
+  left:15%;
+  z-index: 1;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding:10px 10px;
+  background-color: white;
+  position:relative;
+  align-self:center;
+  margin-top: 3%;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 7px;
+  /*margin: 5px 0 22px 0;*/
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color:#4CAF50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+h3
+{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#4CAF50;
+    font-weight: normal;
+    font-size: x-large;
+}
+#b1 ,#b2{
+background: red;
+color:white;
+float: right;
+border: 1px solid red;
+}
+#mylogin
+{
+    top: 30%;
+}
+
+.fa {
+  padding: 9px;
+  font-size: 20px;
+  width: 47%;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+  </style>
+</head>
+<body >
+
+<nav class="navbar navbar-inverse,navbar navbar-inverse navbar-fixed-top" id="navnav" style="padding : 25px 10px;transition: 1s;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar" id="line1"></span>
+        <span class="icon-bar" id="line2"></span>
+        <span class="icon-bar" id="line3"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Bigstarter</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" ><a href="boothomepage.html">Home</a></li>
+        
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-left">
+        <!-- <li>/*<button type="button" class="btn btn-success navbar-btn" style="margin: 5px 5px 7px 7px;" onclick="openform();"><span class="glyphicon glyphicon-log-in"></span> Register </button>*/ -->
+       <li><button  type="button" class="btn btn-success navbar-btn" onclick="openForm();" style="margin: 5px 5px 7px 7px;"> <span class="glyphicon glyphicon-user"></span>Login/Register</button></li>
+        
+      </ul>
+       <ul class="nav navbar-nav navbar-right">
+       <form class="navbar-form navbar-left" action="#">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search">
+    <div class="input-group-btn">
+      <button class="btn btn-default" style="background:#00cc00;border:1px solid #00cc00;color:white;" type="submit">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+    </div>
+  </div>
+</form></ul>
+    </div>
+  </div>
+  </nav>
+  <div class="form-popup" id="myForm">
+        <form action="register.html" class="form-container" name="formreg" method="POST">
+            <button type="button"  id="b1" onclick="closeForm();">X</button>
+            <h3>Register here!</h3>
+         
+          <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=190271341152839&kid_directed_site=0&app_id=190271341152839&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv3.3%2Fdialog%2Foauth%3Fclient_id%3D190271341152839%26redirect_uri%3Dhttps%253A%252F%252Fwww.wishberry.in%252Fauth%252Ffacebook%252Fcallback%26state%3D%257B%2522redirectPath%2522%253A%2522%252F%2522%252C%2522redirectParams%2522%253A%257B%257D%252C%2522redirectSearch%2522%253A%2522%2522%257D%26response_type%3Dtoken%26scope%3Dpublic_profile%252Cemail%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D04e80945-c47b-49d9-9d9f-2a8118db5ea6&cancel_url=https%3A%2F%2Fwww.wishberry.in%2Fauth%2Ffacebook%2Fcallback%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522redirectPath%2522%253A%2522%252F%2522%252C%2522redirectParams%2522%253A%257B%257D%252C%2522redirectSearch%2522%253A%2522%2522%257D%23_%3D_&display=page&locale=en_GB" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google"></a><br>
+          <label for="name">Name</label>
+          <input type="text" placeholder="Enter Name" name="name" id="regn"required>
+          <label for="mail">Email</label>
+          <input type="text" placeholder="Enter Email" id="regm" name="mail" required>
+          <label for="phone">Phone</label>
+          <input type="text" placeholder="Enter Phone number" name="phone" id="regp" required>
+          <label for="psw">Password</label>
+          <input type="password" placeholder="Enter Password" id="regpass" name="psw" required>
+          <label for="conpsw">Confirm Password</label>
+          <input type="password" placeholder="Confirm Password" id="conpass" name="conpsw" required>
+          
+          <label for="country">Country</label>
+          <input type="text" placeholder="Enter Country" name="country" id="regc" required>
+          <input type="submit" class="btn" value="Register" onclick="return validreg();" >
+            <p>Already a member? Login here!</p>
+          <input type="button" class="btn"  value="Login" onclick="closeForm();openlogin();">
+          </form>
+        </div>
+       
+       
+        <div class="form-popup" id="mylogin">
+          <form action="login.html" class="form-container" method="POST" name="formlog">
+              <button type="button" id="b2" onclick="closelogin();">X</button>
+              <h3>Login here!</h3>
+              <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=190271341152839&kid_directed_site=0&app_id=190271341152839&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv3.3%2Fdialog%2Foauth%3Fclient_id%3D190271341152839%26redirect_uri%3Dhttps%253A%252F%252Fwww.wishberry.in%252Fauth%252Ffacebook%252Fcallback%26state%3D%257B%2522redirectPath%2522%253A%2522%252F%2522%252C%2522redirectParams%2522%253A%257B%257D%252C%2522redirectSearch%2522%253A%2522%2522%257D%26response_type%3Dtoken%26scope%3Dpublic_profile%252Cemail%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D04e80945-c47b-49d9-9d9f-2a8118db5ea6&cancel_url=https%3A%2F%2Fwww.wishberry.in%2Fauth%2Ffacebook%2Fcallback%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522redirectPath%2522%253A%2522%252F%2522%252C%2522redirectParams%2522%253A%257B%257D%252C%2522redirectSearch%2522%253A%2522%2522%257D%23_%3D_&display=page&locale=en_GB" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-google"></a><br>
+             
+           <label for="mail1">Email</label>
+            <input type="text" placeholder="Enter Email" id="e1" name="mail1" required>
+            <label for="psw1">Password</label>
+            <input type="password" placeholder="Enter Password" id="p1" name="psw1" required>
+            <input type="submit" class="btn" id="btnid" value="Login" onclick="return validlogin();" >
+            </form>
+          </div>  
+          
+      
+
+
+<img id="img1"class="img-responsive"  src="crowd2.jpg" >
+<br><br><br><br><br>
+<p class="pabout">Thinking a lot about Crowdfunding?</p>
+<p class="pabout1" id="pabout1id">Crowdfunding is becoming an increasingly popular way for startup businesses and more mature firms to raise money.
+  Crowdfunding has emerged to be a valuable, viable way for businesses to raise money. </p>
+  <img class="img-responsive" id="imgchange" src="crowd3.jpg">
+  <p class="pabout">Why Bigstarter?</p>
+  <p class="pabout1" id="pabout11id">Bigstarter aims to give each one of us a chance to fund our ideas, starting directly with the people who are closest to it
+     like friends, fans and community-fellows. And it’s a way to break beyond the traditional methods — loans, investment, industry deals, grants
+      — to discover that we can offer each other value through creation without a middleman dictating the product and terms.</p>
+          <br><br><br>
+<p class="tech2p">Technology</p>
+<img class="tech1" src="crowd7.jpg" id="tech2">
+<p class="tech2p">Arts and Craft</p>
+<img src="crowd8.jpg" class="tech1" id="tech3"> 
+<p class="tech2p">Health and Wellness</p>
+<img src="medicines.jpg" class="tech1" id="tech4">
+<p class="tech2p">Fashion and Clothing</p>
+<img src="crowd9.jpg" class="tech1" id="tech5"><br>
+<p id="end">Bigstarter!</p>
+
+
+<script>
+    function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    document.getElementById("navnav").style.display = "none";
+  }
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    document.getElementById("navnav").style.display = "block";
+  }
+  function closelogin() {
+    document.getElementById("mylogin").style.display = "none";
+    document.getElementById("navnav").style.display = "block";
+  }
+ 
+  function openlogin()
+  {
+    document.getElementById("mylogin").style.display="block";
+    document.getElementById("navnav").style.display = "none";
+  }
+  
+      window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    document.getElementById("navnav").style.padding = "0px 10px";
+    document.getElementById("navnav").style.color = "black";
+    document.getElementById("navnav").style.background = "white";
+    document.getElementById("navnav").style.border = "white";
+    document.getElementById("line1").style.background = "black";
+    document.getElementById("line2").style.background = "black";
+    document.getElementById("line3").style.background = "black";
+
+  } else {
+    document.getElementById("navnav").style.padding = "25px 10px";
+    
+    document.getElementById("navnav").style.color = "white";
+    document.getElementById("navnav").style.background = "black";
+    document.getElementById("line1").style.background = "white";
+    document.getElementById("line2").style.background = "white";
+    document.getElementById("line3").style.background = "white";
+  }
+}
+$(document).ready(function(){
+  $("#imgchange").mouseenter(function(){
+    $(this).attr("src", "crowdedit.jpg");
+    $(this).css("height","inherit");
+  });
+  $("#imgchange").mouseleave(function(){
+    $(this).attr("src", "crowd3.jpg");
+  });
+});
+$(document).ready(function(){
+  $("#pabout1id").mouseenter(function(){
+    $(this).css("text-shadow", "2px 1px gray");
+  });
+  $("#pabout1id").mouseleave(function(){
+    $(this).css("text-shadow", "unset");
+  });
+});
+$(document).ready(function(){
+  $("#pabout11id").mouseenter(function(){
+    $(this).css("text-shadow", "2px 1px gray");
+  });
+  $("#pabout11id").mouseleave(function(){
+    $(this).css("text-shadow", "unset");
+  });
+});
+//this function performs form validation
+function validreg()
+{
+  var x = document.getElementById("regn");
+  var e=document.getElementById("regm");
+  var p=document.getElementById("regpass");
+  var ph=document.getElementById("regp");
+  if(x.value=="" || /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.value)==false ||p.value.length<=3 || ph.value.length!=10 || p!=cp)
+  {
+    if(x.value=="")
+    {alert("Empty name not allowed");
+    document.formreg.name.focus();
+return false;
+    }
+    if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.value)==false)
+    {
+      alert("Enter a valid email");
+      document.formreg.mail.focus();
+      return false;
+    }
+    
+    if(ph.value.length!=10)
+    {
+      alert("Phone number should be of 10 digits");
+      document.formreg.phone.focus();
+      return false;
+    }
+    if(p.value.length<=3)
+    {
+      alert("Password length should be more than 3");
+      document.formreg.psw.focus();
+      return false;
+    }
+    if(p!=cp)
+    {
+      alert("Password and confirm password do not match");
+      document.formreg.conpsw.focus();
+      return false;
+    
+    }
+  }
+}
+function validlogin()
+{
+  var e=document.getElementById("e1");
+  var p=document.getElementById("p1");
+if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.value)==false ||p.value.length<=3)
+{
+  if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.value)==false)
+  {
+    alert("Enter a valid email");
+      document.formlog.mail1.focus();
+      return false;
+  }
+  if(p.value.length<=3)
+  {
+    alert("Password length should be more than 3");
+      document.formlog.psw1.focus();
+      return false;
+  }
+}
+}
+$(document).ready(function(){
+  $("#tech2").mouseenter(function(){
+    $(this).css("opacity", "0.5");
+  });
+  $("#tech2").mouseleave(function(){
+    $(this).css("opacity", "1");
+  });
+});
+$(document).ready(function(){
+  $("#tech3").mouseenter(function(){
+    $(this).css("opacity", "0.5");
+  });
+  $("#tech3").mouseleave(function(){
+    $(this).css("opacity", "1");
+  });
+});
+$(document).ready(function(){
+  $("#tech4").mouseenter(function(){
+    $(this).css("opacity", "0.5");
+  });
+  $("#tech4").mouseleave(function(){
+    $(this).css("opacity", "1");
+  });
+});
+$(document).ready(function(){
+  $("#tech5").mouseenter(function(){
+    $(this).css("opacity", "0.5");
+  });
+  $("#tech5").mouseleave(function(){
+    $(this).css("opacity", "1");
+  });
+});
+</script>
+</body>
+</html>
